@@ -1,5 +1,5 @@
+/*
 package OOP_3;
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -20,3 +20,4 @@ public class Lärare extends Person {
         System.out.println(getNamn() + " är nu lärare för kursen " + nyKurs.getNamn());
     }
 }
+*/
