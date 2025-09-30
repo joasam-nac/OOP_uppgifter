@@ -17,5 +17,15 @@ public class HusvagnsAnnons extends FordonsAnnons{
         return antalSängar;
     }
 
-
+    @Override
+    public String getAnnonsText(){
+        String annons = "Information om husvagnen:\n";
+        annons += getRubrik() + "\n";
+        annons += "kostar: " + getPris() + "kr, ";
+        annons += "årsmodell: " + getÅrsmodell() + ", ";
+        annons += getAntalMil() + " mil";
+        annons += " Har dusch " + harDusch + ", antal sängar: " + antalSängar;
+        annons += "\n" + getBeskrivning();
+        return annons;
+    }
 }

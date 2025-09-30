@@ -1,19 +1,49 @@
 package HederligeHarry.medInterfaces;
 
-public class FordonsAnnons {
-    private String rubrik;
-    private double pris, beskrivning;
-    private int årsmodell, antalMil;
+public abstract class FordonsAnnons {
+    int pris;
+    int årsmodell;
+    String rubrik;
+    String beskrivning;
+    int antalMil;
 
-    public String getAnnonsText(){
-        String annons = "Information om annonsen:\n";
-        annons += rubrik + "\n";
-        annons += "kostar: " + pris + "kr, ";
-        annons += "årsmodell: " + årsmodell + ", ";
-        annons += antalMil + " mil";
-        annons += "\n" + beskrivning;
-        return annons;
+    public FordonsAnnons(int pris, int årsmodell, String rubrik, String beskrivning, int antalMil){
+        this.pris = pris;
+        this.årsmodell = årsmodell;
+        this.rubrik = rubrik;
+        this.beskrivning = beskrivning;
+        this.antalMil = antalMil;
     }
 
+    public int getAntalMil() {
+        return antalMil;
+    }
 
+    public int getÅrsmodell() {
+        return årsmodell;
+    }
+
+    public String getBeskrivning() {
+        return beskrivning;
+    }
+
+    public void setBeskrivning(String beskrivning) {
+        this.beskrivning = beskrivning;
+    }
+
+    public String getRubrik() {
+        return rubrik;
+    }
+
+    public void setRubrik(String rubrik) {
+        this.rubrik = rubrik;
+    }
+
+    public int getPris() {
+        return pris;
+    }
+
+    public void setPris(int pris) {
+        this.pris = pris;
+    }
 }
